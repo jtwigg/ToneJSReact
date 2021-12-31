@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import * as Tone from 'tone'
+
 
 function App() {
+
+  const onAction = () => {
+    Tone.start()
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => onAction()} >Start</button>
       </header>
     </div>
   );
